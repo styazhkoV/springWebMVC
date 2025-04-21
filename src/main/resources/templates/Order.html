@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма заказа сайта</title>
+</head>
+<body>
+<h1>Форма заказа сайта</h1>
+
+<form th:action="@{/order}" method="post" th:object="${order}">
+    <label>Название проекта:
+        <input type="text" th:field="*{nameProject}" />
+    </label><br/>
+
+    <label>Имя клиента:
+        <input type="text" th:field="*{fullName}" />
+    </label><br/>
+
+    <label>Контактное имя:
+        <input type="text" th:field="*{name}" />
+    </label><br/>
+
+    <label>Email:
+        <input type="email" th:field="*{email}" />
+    </label><br/>
+
+    <label>Телефон:
+        <input type="text" th:field="*{phone}" />
+    </label><br/>
+
+    <label>Сообщение:
+        <textarea th:field="*{message}"></textarea>
+    </label><br/>
+
+    <label>Описание:
+        <textarea th:field="*{description}"></textarea>
+    </label><br/>
+
+    <label>Статус:
+        <input type="text" th:field="*{status}" />
+    </label><br/>
+
+    <button type="submit">Отправить</button>
+</form>
+
+</body>
+</html>

@@ -2,8 +2,15 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
-    password: postgresql
+    password: postgres
     driver-class-name: org.postgresql.Driver
+
+    thymeleaf:
+      prefix: classpath:/templates/
+      suffix: .html
+      mode: HTML
+      encoding: UTF-8
+      cache: false
 
   jpa:
     hibernate:
@@ -17,3 +24,6 @@ spring:
   output:
     ansi:
       enabled: always
+
+
+
